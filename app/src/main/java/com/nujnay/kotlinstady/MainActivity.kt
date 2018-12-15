@@ -3,9 +3,8 @@ package com.nujnay.kotlinstady
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
-import android.view.Gravity
-import android.widget.FrameLayout
-import android.widget.LinearLayout
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() {
 
@@ -41,6 +40,24 @@ class MainActivity : Activity() {
             else -> {
             }
         }
+
+        var a = {
+            Log.d("eerrrfd", "xxxxssss")
+        }
+        aaa {
+            Log.d("eerrrfd", "xxxxssss")
+        }
+
+        tv_test_click.clickDelay {
+            Log.d("eeeeee", "2222222")
+        }
+        tv_test_click_2.clickDelay{
+            Log.d("eeeeee", "33333")
+        }
+    }
+
+    fun aaa(test: () -> Int) {
+        test()
     }
 
     infix fun Int.add(x: Int): Int {
