@@ -23,6 +23,13 @@ public class JavaActivity extends Activity {
                 return null;
             }
         });
+        Utils.Companion.clickDelay(tv_test_click, new Function0<Unit>() {
+            @Override
+            public Unit invoke() {
+
+                return null;
+            }
+        });
         Utils.Companion.clickDelay(tv_test_click_2, new Function0<Unit>() {
             @Override
             public Unit invoke() {
