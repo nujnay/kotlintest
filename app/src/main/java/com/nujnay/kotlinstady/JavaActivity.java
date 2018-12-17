@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.function.Consumer;
+
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
@@ -23,6 +25,7 @@ public class JavaActivity extends Activity {
                 return null;
             }
         });
+
         Utils.Companion.clickDelay(tv_test_click, new Function0<Unit>() {
             @Override
             public Unit invoke() {
@@ -37,5 +40,20 @@ public class JavaActivity extends Activity {
                 return null;
             }
         });
+        Function0 function0 = new Function0() {
+            @Override
+            public Object invoke() {
+                Log.d("clickDelay", "222");
+                return null;
+            }
+        };
+    }
+
+    public void ssss(Function0 function0) {
+        if (0 == 0) {
+            function0.invoke();
+        } else {
+
+        }
     }
 }

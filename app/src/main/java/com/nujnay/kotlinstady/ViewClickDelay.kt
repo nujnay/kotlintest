@@ -29,7 +29,7 @@ infix fun View.clickDelay(clickAction: () -> Unit) {
 }
 class Utils {
     companion object {
-        infix fun View.clickDelay(clickAction: () -> Unit) {
+         fun View.clickDelay(clickAction: () -> Unit) {
             this.setOnClickListener {
                 if (this.hashCode() != hash) {
                     hash = this.hashCode()
