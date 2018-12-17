@@ -12,7 +12,6 @@ object ViewClickDelay {
     var lastClickTime: Long = 0
     var SPACE_TIME: Long = 3000
 }
-
 infix fun View.clickDelay(clickAction: () -> Unit) {
     this.setOnClickListener {
         if (this.hashCode() != hash) {
@@ -24,6 +23,25 @@ infix fun View.clickDelay(clickAction: () -> Unit) {
             if (currentTime - lastClickTime > SPACE_TIME) {
                 lastClickTime = System.currentTimeMillis()
                 clickAction()
+            }
+        }
+    }
+}
+class Utils {
+    companion object {
+        infix fun View.clickDelay(clickAction: () -> Unit) {
+            this.setOnClickListener {
+                if (this.hashCode() != hash) {
+                    hash = this.hashCode()
+                    lastClickTime = System.currentTimeMillis()
+                    clickAction()
+                } else {
+                    val currentTime = System.currentTimeMillis()
+                    if (currentTime - lastClickTime > SPACE_TIME) {
+                        lastClickTime = System.currentTimeMillis()
+                        clickAction()
+                    }
+                }
             }
         }
     }
