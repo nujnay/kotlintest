@@ -27,7 +27,7 @@ infix fun View.clickDelay(clickAction: () -> Unit) {
         }
     }
 }
-class Utils {
+class ClickDelay {
     companion object {
          fun View.clickDelay(clickAction: () -> Unit) {
             this.setOnClickListener {
