@@ -56,8 +56,7 @@ class MainActivity : Activity() {
         }
     }
 
-    fun aaa(test: () -> Int) {
-        test()
+    fun aaa(ccccdsdc: () -> Int) {
     }
 
     infix fun Int.add(x: Int): Int {
