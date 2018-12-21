@@ -51,9 +51,25 @@ class MainActivity : Activity() {
         tv_test_click.clickDelay {
             Log.d("eeeeee", "2222222")
         }
-        tv_test_click_2.clickDelay{
+        tv_test_click_2.clickDelay {
             Log.d("eeeeee", "33333")
         }
+        var ss: sss? = sss()
+        ss = null
+        ss?.lll()
+
+//        var sss: Int? = 1
+//        sss = null
+//        Log.d("sssssssss", sss?.toString())
+
+    }
+
+    inner class sss {
+        fun lll() {
+            Log.d("llllll", "lll")
+
+        }
+
     }
 
     fun aaa(ccccdsdc: () -> Unit) {
