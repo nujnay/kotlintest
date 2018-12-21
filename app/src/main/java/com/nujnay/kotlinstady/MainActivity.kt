@@ -58,11 +58,11 @@ class MainActivity : Activity() {
         ss = null
         ss?.lll()
 
-//        var sss: Int? = 1
-//        sss = null
-//        Log.d("sssssssss", sss?.toString())
-
+        var sss: Int? = 1
+        sss = null
+//        Log.d("sssssssss", sss?.toString())//崩溃
     }
+
 
     inner class sss {
         fun lll() {
