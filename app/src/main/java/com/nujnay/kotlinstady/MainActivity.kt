@@ -5,9 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : Activity() {
 
+    var aa = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -61,6 +65,12 @@ class MainActivity : Activity() {
         var sss: Int? = 1
         sss = null
 //        Log.d("sssssssss", sss?.toString())//崩溃
+        GlobalScope.launch {
+            // launch new coroutine in background and continue
+            delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
+            Log.d("zzzzzz", aa.toString()) // print after delay
+        }
+        aa = 33
     }
 
 
